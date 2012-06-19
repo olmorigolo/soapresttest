@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://api.zanox.com/namespace/2011-03-01/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:GetProgramRequest>
+         <ns:programId>?</ns:programId>
+         <ns:connectId>?</ns:connectId>
+      </ns:GetProgramRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

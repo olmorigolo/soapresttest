@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:v1="http://coreservices.zanox.com/affiliatenetwork/promoservice/v1">
+	<soapenv:Header />
+	<soapenv:Body>
+		<v1:getPromoRequest>
+			<id>?</id>
+		</v1:getPromoRequest>
+	</soapenv:Body>
+</soapenv:Envelope>

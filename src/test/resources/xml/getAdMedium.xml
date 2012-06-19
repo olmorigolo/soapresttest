@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://api.zanox.com/namespace/2011-03-01/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:GetAdmediumRequest>
+         <!--Optional:-->
+         <ns:admediumId>?</ns:admediumId>
+         <!--Optional:-->
+         <ns:adspaceId>?</ns:adspaceId>
+         <ns:trackingLink>?</ns:trackingLink>
+         <ns:connectId>?</ns:connectId>
+      </ns:GetAdmediumRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
