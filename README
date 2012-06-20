@@ -1,0 +1,53 @@
+### Purpose of the soapresttest Framework
+
+This framework replaces SOAPUI for rest and soap tests.
+
+GitHub repository at https://github.com/olmorigolo/soapresttest
+
+### Usage
+
+	ServiceClient client = new SoapServiceClient("http://your.company.com/exampleservice/soap", "getExample").setValue("//soapenv:Body/getExampleRequest//id", "14275");
+	
+	SoapResponse response = (SoapResponse) client.executeRequest(); 
+	
+	assertEquals("Expected value", response.evalValue("//name"));
+
+
+### Outputting response and request objects
+
+	client.setDebug(true);
+
+### Running the project
+
+Currently I use maven as the package manager. 
+If you don't use a package manager like maven, then you need to get these jars and include them into the classpath. See the pom.xml for details.
+This is the maven dependency:tree output:
+
+[INFO] com.zanox.internal.soapresttest:soapresttest:jar:0.0.0.1-SNAPSHOT
+[INFO] +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.0.4:compile
+[INFO] |  \- commons-codec:commons-codec:jar:1.2:compile
+[INFO] +- org.jdom:jdom:jar:2.0.1:compile
+[INFO] +- junit:junit:jar:4.10:compile
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.1:compile
+[INFO] +- org.apache.directory.studio:org.apache.commons.io:jar:2.0.1:compile
+[INFO] |  \- commons-io:commons-io:jar:2.0.1:compile
+[INFO] +- org.apache.directory.studio:org.apache.commons.lang:jar:2.6:compile
+[INFO] |  \- commons-lang:commons-lang:jar:2.6:compile
+[INFO] +- org.json:org.json:jar:2.0-NEXUS-3758:compile
+[INFO] +- org.codehaus.groovy:groovy-xmlrpc:jar:0.8:compile
+[INFO] |  +- org.codehaus.groovy:groovy-all:jar:1.8.6:compile
+[INFO] |  +- xml-apis:xml-apis:jar:1.3.04:compile
+[INFO] |  \- jivesoftware:smack:jar:3.1.0:compile
+[INFO] +- xerces:xercesImpl:jar:2.9.1:compile
+[INFO] \- jaxen:jaxen:jar:1.1.3:compile
+[INFO]    +- dom4j:dom4j:jar:1.6.1:compile
+[INFO]    +- jdom:jdom:jar:1.0:compile
+[INFO]    \- xom:xom:jar:1.0:compile
+[INFO]       +- xerces:xmlParserAPIs:jar:2.6.2:compile
+[INFO]       +- xalan:xalan:jar:2.6.0:compile
+[INFO]       \- com.ibm.icu:icu4j:jar:2.6.1:compile
+ 
+ 
+There is one library (soa-model-core-1.1.1.jar) included to the classpath, while it is not available in any a public repository.
+ 

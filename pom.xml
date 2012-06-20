@@ -14,14 +14,6 @@
 		<xerces.version>2.9.1</xerces.version>
 	</properties>
 
-	<scm>
-		<url>https://svn.zanox.com/zxlib/soapresttest/trunk</url>
-		<connection>scm:svn:https://svn.zanox.com/zxlib/soapresttest/trunk
-		</connection>
-		<developerConnection>scm:svn:hhttps://svn.zanox.com/zxlib/soapresttest/trunk
-		</developerConnection>
-	</scm>
-
 	<dependencies>
 		<dependency>
 			<groupId>commons-httpclient</groupId>
